@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
-const navigation = [
-  { name: "Produtividade & Carreira", href: "/produtividade-carreira" },
-  { name: "Tecnologia no Dia a Dia", href: "/tecnologia" },
-  { name: "Finanças Pessoais", href: "/financas" },
-  { name: "Bem-Estar & Vida Digital", href: "/bem-estar" },
+const categories = [
+  { name: "Produtividade & Carreira", href: "/produtividade-carreira", description: "Dicas para aumentar sua produtividade e crescer na carreira" },
+  { name: "Tecnologia no Dia a Dia", href: "/tecnologia", description: "Apps e ferramentas para facilitar sua rotina" },
+  { name: "Finanças Pessoais", href: "/financas", description: "Gerir melhor o seu dinheiro e investimentos" },
+  { name: "Bem-Estar & Vida Digital", href: "/bem-estar", description: "Equilibrar tecnologia e qualidade de vida" },
+];
+
+const mainNavigation = [
   { name: "Sobre Nós", href: "/sobre" },
-  { name: "Contato", href: "/contato" },
+  { name: "Ajuda Profissional", href: "/ajuda-profissional" },
 ];
 
 const Header = () => {
@@ -38,7 +49,36 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            {navigation.map((item) => (
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors duration-200 bg-transparent hover:bg-accent/50">
+                    Explorar Conteúdos
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {categories.map((category) => (
+                        <NavigationMenuLink key={category.name} asChild>
+                          <Link
+                            to={category.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none text-primary">
+                              {category.name}
+                            </div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {category.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
+            {mainNavigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -69,7 +109,23 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden">
             <div className="space-y-1 pb-4 pt-2">
-              {navigation.map((item) => (
+              {/* Categories in mobile */}
+              <div className="px-3 py-2 text-sm font-semibold text-primary">
+                Explorar Conteúdos
+              </div>
+              {categories.map((category) => (
+                <Link
+                  key={category.name}
+                  to={category.href}
+                  className="block px-6 py-2 text-sm text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {category.name}
+                </Link>
+              ))}
+              
+              {/* Main navigation in mobile */}
+              {mainNavigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
