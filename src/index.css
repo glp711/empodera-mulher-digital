@@ -2,57 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Empodere a Sua Vida - Design System Feminino
+Paleta: Rosa suave, lilás, branco e dourado para um visual elegante e profissional
 */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 340 15% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 340 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 340 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rosa suave como cor principal */
+    --primary: 330 65% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 330 80% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Rosa mais suave para secundário */
+    --secondary: 330 25% 95%;
+    --secondary-foreground: 340 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 330 15% 96%;
+    --muted-foreground: 340 10% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Lilás para accent */
+    --accent: 280 65% 80%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 280 80% 90%;
+
+    /* Dourado para destaques */
+    --gold: 45 90% 70%;
+    --gold-foreground: 340 15% 25%;
+    --gold-glow: 45 95% 80%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 330 20% 90%;
+    --input: 330 15% 94%;
+    --ring: 330 65% 75%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradientes elegantes */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Sombras elegantes */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-gold: 0 5px 20px -5px hsl(var(--gold) / 0.3);
+    --shadow-soft: 0 4px 12px -2px hsl(var(--muted-foreground) / 0.1);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Transições suaves */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.2s ease-out;
   }
 
   .dark {
@@ -65,8 +74,9 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 330 65% 75%;
     --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-glow: 330 80% 85%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -74,8 +84,13 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 280 65% 80%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent-glow: 280 80% 90%;
+
+    --gold: 45 90% 70%;
+    --gold-foreground: 222.2 47.4% 11.2%;
+    --gold-glow: 45 95% 80%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -83,14 +98,12 @@ All colors MUST be HSL.
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Gradientes para modo escuro */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
   }
 }
 
@@ -101,5 +114,73 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Prose styling for article content */
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-bold text-foreground mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-semibold text-foreground mt-6 mb-3;
+  }
+  
+  .prose h4 {
+    @apply text-lg font-semibold text-foreground mt-4 mb-2;
+  }
+  
+  .prose p {
+    @apply text-muted-foreground mb-4 leading-7;
+  }
+  
+  .prose ul {
+    @apply list-disc list-inside text-muted-foreground mb-4 space-y-2;
+  }
+  
+  .prose ol {
+    @apply list-decimal list-inside text-muted-foreground mb-4 space-y-2;
+  }
+  
+  .prose li {
+    @apply leading-7;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-primary/80 transition-colors underline;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 my-6 italic text-muted-foreground bg-muted/30 py-2;
   }
 }
