@@ -141,7 +141,7 @@ const ArticlePage = () => {
               
               <Button variant="outline" onClick={handleShare}>
                 <Heart className="h-4 w-4 mr-2" />
-                Gostei deste artigo
+                Gosto deste artigo
               </Button>
             </div>
           </footer>

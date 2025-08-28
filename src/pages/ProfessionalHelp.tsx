@@ -48,7 +48,7 @@ const ProfessionalHelp = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Descubra o poder transformador dos livros de desenvolvimento pessoal especialmente selecionados 
+              Descubra o poder transformador dos livros de desenvolvimento pessoal especialmente seleccionados 
               para mulheres que desejam empoderar a sua vida e alcançar todo o seu potencial.
             </p>
           </div>
@@ -107,7 +107,7 @@ const ProfessionalHelp = () => {
               
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Invista no seu crescimento pessoal e profissional. Estes livros foram cuidadosamente 
-                selecionados para ajudar mulheres como você a alcançar o sucesso e a felicidade que merecem.
+                seleccionados para ajudar mulheres como você a alcançar o sucesso e a felicidade que merecem.
               </p>
               
               <Button 

@@ -38,8 +38,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contato" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contato
+                <Link to="/ajuda-profissional" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Ajuda Profissional
                 </Link>
               </li>
               <li>
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Mail className="h-4 w-4" />
-              <span>contato@empodesuavida.online</span>
+              <span>contacto@empodesuavida.online</span>
             </div>
           </div>
         </div>

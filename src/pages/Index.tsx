@@ -58,7 +58,7 @@ const Index = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Sobre o Projeto
+                Sobre Nós
               </Button>
             </div>
           </div>
@@ -91,10 +91,10 @@ const Index = () => {
           </div>
           
           <div className="text-center">
-            <Button variant="outline" size="lg">
-              Ver Todos os Artigos
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+              <Button variant="outline" size="lg">
+                Ver Todos os Artigos
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
           </div>
         </div>
       </section>

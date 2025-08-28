@@ -211,10 +211,10 @@ const PrivacyPolicy = () => {
                     Para exercer os seus direitos ou esclarecer dúvidas sobre esta Política de Privacidade, 
                     contacte-nos:
                   </p>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <p><strong>Email:</strong> contato@empodesuavida.online</p>
-                    <p><strong>Assunto:</strong> "Proteção de Dados - [o seu pedido]"</p>
-                  </div>
+                <div className="bg-muted/50 p-4 rounded-lg">
+                  <p><strong>Email:</strong> contacto@empodesuavida.online</p>
+                  <p><strong>Assunto:</strong> "Proteção de Dados - [o seu pedido]"</p>
+                </div>
                   <p className="text-sm">
                     Responderemos ao seu pedido no prazo de 30 dias, conforme exigido pelo RGPD.
                   </p>

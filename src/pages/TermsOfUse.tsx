@@ -284,7 +284,7 @@ const TermsOfUse = () => {
                     Para questões sobre estes Termos de Uso, contacte-nos:
                   </p>
                   <div className="bg-muted/50 p-4 rounded-lg">
-                    <p><strong>Email:</strong> contato@empodesuavida.online</p>
+                    <p><strong>Email:</strong> contacto@empodesuavida.online</p>
                     <p><strong>Assunto:</strong> "Termos de Uso - [a sua questão]"</p>
                   </div>
                 </div>
